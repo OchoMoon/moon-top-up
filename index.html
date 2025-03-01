@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Top Up Game</title>
+</head>
+<body>
+  <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#f2f2f2">
+    <tr>
+      <td align="center">
+        <h1>Top Up Game</h1>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
+          <tr>
+            <td>
+              <h2>Top Up Free Fire</h2>
+              <form>
+                <label for="nominal-free-fire">Nominal:</label>
+                <select id="nominal-free-fire" name="nominal">
+                  <option value="10000">10.000 Diamonds</option>
+                  <option value="20000">20.000 Diamonds</option>
+                  <option value="50000">50.000 Diamonds</option>
+                </select>
+                <button id="beli-free-fire">Beli</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Top Up Mobile Legend</h2>
+              <form>
+                <label for="nominal-mobile-legend">Nominal:</label>
+                <select id="nominal-mobile-legend" name="nominal">
+                  <option value="10000">10.000 Diamonds</option>
+                  <option value="20000">20.000 Diamonds</option>
+                  <option value="50000">50.000 Diamonds</option>
+                </select>
+                <button id="beli-mobile-legend">Beli</button>
+              </form>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <h2>Top Up PUBG</h2>
+              <form>
+                <label for="nominal-pubg">Nominal:</label>
+                <select id="nominal-pubg" name="nominal">
+                  <option value="10000">10.000 UC</option>
+                  <option value="20000">20.000 UC</option>
+                  <option value="50000">50.000 UC</option>
+                </select>
+                <button id="beli-pubg">Beli</button>
+              </form>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    const beliFreeFireButton = document.getElementById('beli-free-fire');
+    const beliMobileLegendButton = document.getElementById('beli-mobile-legend');
+    const beliPUBGButton = document.getElementById('beli-pubg');
+
+    beliFreeFireButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const nominal = document.getElementById('nominal-free-fire').value;
+      const pesan = `Saya ingin membeli ${nominal} Diamonds untuk Free Fire`;
+      kirimPesanWhatsApp(pesan);
+    });
+
+    beliMobileLegendButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const nominal = document.getElementById('nominal-mobile-legend').value;
+      const pesan = `Saya ingin membeli ${nominal} Diamonds untuk Mobile Legend`;
+      kirimPesanWhatsApp(pesan);
+    });
+
+    beliPUBGButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const nominal = document.getElementById('nominal-pubg').value;
+      const pesan = `Saya ingin membeli ${nominal} UC untuk PUBG`;
+      kirimPesanWhatsApp(pesan);
+    });
+
+    function kirimPesanWhatsApp(pesan) {
+      const url = `https://wa.me/?text=${pesan}`;
+      window.open(url, '_blank');
+    }
+  </script>
+</body>
+</html>
