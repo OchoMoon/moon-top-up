@@ -1,95 +1,262 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Top Up Game</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X=UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon - Top Up</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#f2f2f2">
-    <tr>
-      <td align="center">
-        <h1>Top Up Game</h1>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <table width="100%" border="0" cellpadding="10" cellspacing="0" bgcolor="#ffffff">
-          <tr>
-            <td>
-              <h2>Top Up Free Fire</h2>
-              <form>
-                <label for="nominal-free-fire">Nominal:</label>
-                <select id="nominal-free-fire" name="nominal">
-                  <option value="1.000">5  Diamonds</option>
-                  <option value="5.000">40 Diamonds</option>
-                  <option value="20.000">180 Diamonds</option>
-                </select>
-                <button id="beli-free-fire">Beli</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h2>Top Up Mobile Legend</h2>
-              <form>
-                <label for="nominal-mobile-legend">Nominal:</label>
-                <select id="nominal-mobile-legend" name="nominal">
-                  <option value="10000">10.000 Diamonds</option>
-                  <option value="20000">20.000 Diamonds</option>
-                  <option value="50000">50.000 Diamonds</option>
-                </select>
-                <button id="beli-mobile-legend">Beli</button>
-              </form>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <h2>Top Up PUBG</h2>
-              <form>
-                <label for="nominal-pubg">Nominal:</label>
-                <select id="nominal-pubg" name="nominal">
-                  <option value="10000">10.000 UC</option>
-                  <option value="20000">20.000 UC</option>
-                  <option value="50000">50.000 UC</option>
-                </select>
-                <button id="beli-pubg">Beli</button>
-              </form>
-            </td>
-          </tr>
-        </table>
-      </td>
-    </tr>
-  </table>
-
-  <script>
-    const beliFreeFireButton = document.getElementById('beli-free-fire');
-    const beliMobileLegendButton = document.getElementById('beli-mobile-legend');
-    const beliPUBGButton = document.getElementById('beli-pubg');
-
-    beliFreeFireButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      const nominal = document.getElementById('nominal-free-fire').value;
-      const pesan = `Saya ingin membeli ${nominal} Diamonds untuk Free Fire`;
-      kirimPesanWhatsApp(pesan);
-    });
-
-    beliMobileLegendButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      const nominal = document.getElementById('nominal-mobile-legend').value;
-      const pesan = `Saya ingin membeli ${nominal} Diamonds untuk Mobile Legend`;
-      kirimPesanWhatsApp(pesan);
-    });
-
-    beliPUBGButton.addEventListener('click', (e) => {
-      e.preventDefault();
-      const nominal = document.getElementById('nominal-pubg').value;
-      const pesan = `Saya ingin membeli ${nominal} UC untuk PUBG`;
-      kirimPesanWhatsApp(pesan);
-    });
-
-    function kirimPesanWhatsApp(pesan) {
-      const url = `https://wa.me/62895402716304?text=${pesan}`;
-      window.open(url, '_blank');
-    }
-  </script>
+  <header>
+    <a href="/" class="title">Moon - Top up</a>
+    <input type="seacrh" name="" id="" class="input-search" placeholder="Cari Sesuatu">
+    <button type="submit" class="input-submit">CARI</button>
+    <nav>
+      <ul>
+        <li><a href="#home">BERANDA</a></li>
+        <li><a href="#populer">PRODUK</a></li>
+        <li><a href="#">KONTAK</a></li>
+      </ul>
+    </nav>
+  </header>
+  
+  <div id="home" class="slider">
+        <h4>Klik Disini Untuk Slide Gambar</h4>
+        <input type="radio" name="choose" id="" class="choose_1">
+        <input type="radio" name="choose" id="" class="choose_2">
+        <div class="slides">
+            <img src="/slide-1.jpg" alt="" class="slide s1">
+            <img src="/slide-2.jpg" alt="" class="slide">
+        </div>
+</div>
+<h1 class="title-p">GAME POPULER</h1>
+<section id="populer" class="populer">
+ <div class="ff">
+        <div class="link">
+            <a href="#harga-ff">
+                    <img src="/ff.png" style="margin-top: 1px; margin-left: 5px;">
+                    <div class="judul-produk">Free Fire</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-ff">
+            <div class="popup">                <h2>HARGA FREE FIRE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    70 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 9.000</span>
+                    <br>                    140 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 17.500</span>
+                    <br>
+                    210 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 25.500</span>
+                    <br>
+                    280 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 35.000</span>
+                    <br>
+                    355 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 43.000</span>
+                    <br>
+                    545 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 66.500</span>
+                    <br>
+                    720 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 85.000</span>
+                    <br>
+                    1075 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 125.000</span>
+                    <br>
+                    M. Mingguan  : 
+                    <br>
+                    <span class="harga">Rp 27.000</span>
+                    <br>
+                    M. Bulanan   : 
+                    <br>
+                    <span class="harga">Rp 78.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/62895402716304" 
+                    target="_blank" 
+                    rel="noopener noreferrer">Pesan Sekarang</a>
+                </div>            </div>
+        </div>
+    </div>
+    
+     <div class="mlbb">
+        <div class="link">
+            <a href="#harga-mlbb">
+              <center>
+                    <img src="/mlbb.jpg" style="margin-top: 1px; margin-left: 4px;">
+                    </center>
+                    <div class="judul-produk">Mobile Legend</div>
+            </a>
+        </div>
+        <div class="overlay" id="harga-mlbb">
+            <div class="popup">
+                <h2>HARGA MOBILE LEGEND</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    86 Diamonds  : 
+                    <br>    
+                    <span class="harga">Rp 23.000</span>
+                    <br>
+                    172 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 45.000</span>
+                    <br>
+                    257 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 67.000</span>
+                    <br>
+                    284 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 74.000</span>
+                    <br>
+                    429 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 111.500</span>
+                    <br>
+                    514 Diamond  : 
+                    <br>
+                    <span class="harga">Rp 138.000</span>
+                    <br>
+                    878 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 218.500</span>
+                    <br>
+                    1159 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 293.500</span>
+                    <br>
+                    Weekly Diamond Pass  :
+                    <br>
+                    <span class="harga">Rp 27.500</span>
+                    <br>
+                    Mlbb Twilight Pass  :
+                    <br>
+                    <span class="harga">Rp 144.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/62895402716304" 
+                    target="_blank" 
+                    rel="noopener noreferrer">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+         <div class="pubg">
+        <div class="link">
+            <a href="#harga-pubg">
+                    <img src="/pubgm.jpg" style="margin-top: 1px; margin-left: 5px;">
+                    <a class="judul-produk">Pubg Mobile</a>
+            </a>
+        </div>
+        <div class="overlay" id="harga-pubg">
+            <div class="popup">
+                <h2>HARGA PUBG MOBILE</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    25 UC   : 
+                    <br>    
+                    <span class="harga">Rp 7.500</span>
+                    <br>
+                    70 UC : 
+                    <br>
+                    <span class="harga">Rp 20.000</span>
+                    <br>
+                    210 UC : 
+                    <br>
+                    <span class="harga">Rp 44.500</span>
+                    <br>
+                    250 UC : 
+                    <br>
+                    <span class="harga">Rp 57.000</span>
+                    <br>
+                    350 UC : 
+                    <br>
+                    <span class="harga">Rp 77.500</span>
+                    <br>
+                    500 UC  : 
+                    <br>
+                    <span class="harga">Rp 101.000</span>
+                    <br>
+                    750 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 156.500</span>
+                    <br>
+                    1000 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 210.000</span>
+                    <br>
+                    Royal Pass  : 
+                    <br>
+                    <span class="harga">Rp 156.000</span>
+                    <br>
+                    Elite Pass   : 
+                    <br>
+                    <span class="harga">Rp 385.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/62895402716304" 
+                    target="_blank" 
+                    rel="noopener noreferrer">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </div>
+             <div class="genshin">
+            <div class="link">
+            <a href="#harga-genshin">
+                    <img src="/GenshinImpact.jpg" style="margin-top: 1px; margin-left: 5px;">
+                    <div class="judul-produk">Genshin Inpact</div>
+            </a>
+        </div>
+    <div class="overlay" id="harga-genshin">
+            <div class="popup">                <h2>HARGA GENSHIN INPACT</h2>
+                <a class="close" href="#populer">&times;</a>
+                <br>
+                <div class="content">
+                    60 Crystal : 
+                    <br>
+                    <span class="harga">Rp 12.500</span>
+                    <br>
+                    120 Diamonds : 
+                    <br>
+                    <span class="harga">Rp 26.000</span>
+                    <br>
+                    330 Crystal : 
+                    <br>
+                    <span class="harga">Rp 58.000</span>
+                    <br>
+                    1090 Crystal  : 
+                    <br>
+                    <span class="harga">Rp 170.000</span>
+                    <br>
+                    2240 Crystal : 
+                    <br>
+                    <span class="harga">Rp 372.500</span>
+                    <br>
+                    3880 Crystal : 
+                    <br>
+                    <span class="harga">Rp 580.000</span>
+                    <br>
+                    Blessing welkin moon  : 
+                    <br>
+                    <span class="harga">Rp 58.000</span>
+                    <br>
+                    <a class="pesan" href="https://wa.me/62895402716304" 
+                    target="_blank" 
+                    rel="noopener noreferrer">Pesan Sekarang</a>
+                </div>            </div>
+        </div>
+    </div>
 </body>
 </html>
