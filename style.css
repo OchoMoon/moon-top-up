@@ -19,6 +19,10 @@ body
 {
   background-color: var(--dark-blue);
   color: var(--white);
+  background-image: url('https://files.catbox.moe/z1lg87.jpg');
+  background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
 }
 
 header
