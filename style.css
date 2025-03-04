@@ -19,7 +19,7 @@ body
 {
   background-color: var(--dark-blue);
   color: var(--white);
-  background-image: url('https://files.catbox.moe/z1lg87.jpg');
+  background-image: url('https://files.catbox.moe/bfpgyq.jpg');
   background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -186,13 +186,26 @@ nav ul li a:hover
   margin-left: 60px;
 }
 
-.populer
+.h1
 {
   display: grid;
   grid-template-columns: repeat(6,1fr)
+  font-size: 10pt;
 }
 
-.populer img 
+.h1 img 
+{
+  border-radius: 20px;
+}
+
+.premium
+{
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  font-size: 10pt;
+}
+
+.populer img
 {
   border-radius: 20px;
 }
@@ -262,7 +275,7 @@ footer
  
 .sosmed img 
 {
-    width: 50px;
+    width: 47px;
 }
  
 #copyright
