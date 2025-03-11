@@ -81,36 +81,31 @@ nav ul li a:hover
   border-bottom: 1px solid var(--white);
 }
 
-.slider
-{
-    margin-top: 10%;
-    display: block;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    width: 65%;
-}
-
-.slider h4
-{
-    margin-top: 20%;
-}
-
-.slides
-{
-    display: flex;
-    width: 50rem;
+.banner-container {
+    width: 50%;
     overflow: hidden;
+    position: fixed;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 200px; /* Tambahin jarak dari header */
+    margin-bottom: -100px; /* Jarak ke bawah */
 }
 
-.slides img 
-{
-    border-radius: 10px;
+.slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.5s ease-in-out;
 }
 
-.slide
-{
-    width: 50rem;
-    transition: .5s;
+.slide {
+    min-width: 100%;
+}
+
+.slide img {
+    width: 97%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50px;
 }
 
 .choose_1:checked ~ .slides > .s1
@@ -148,7 +143,7 @@ nav ul li a:hover
     padding: 20px;
     background: var(--dark-blue);
     border-radius: 5px;
-    width: 30%;
+    width: 80%;
     position: relative;
     transition: all 5s ease-in-out;
 }
